@@ -1,1 +1,27 @@
--- login페이지
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charser="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>로그인</title>
+    <link rel="stylesheet" href="{% static '/css/login.css' %}" />
+  </head>
+  <body>
+    <div
+      style="cursor: pointer; display: flex; justify-content: center"
+      onclick="location.href='/'"
+    >
+      <img src="{% static '/assets/icons/logo.png' %}" />
+    </div>
+    <div class="login">
+      <p class="id">아이디</p>
+      <input class="id-box" type="text" placeholder="ID를 입력하세요" />
+      <p class="psw">비밀번호</p>
+      <input class="psw-box" type="text" placeholder="비밀번호를 입력하세요" />
+      <input class="button" type="button" value="로그인하기" />
+    </div>
+  </body>
+  <footer><div class="footer"></div></footer>
+</html>
