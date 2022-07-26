@@ -22,3 +22,6 @@ def logout(request):
 
 def signup(request):
     return render(request,'signup.html')
+
+def success(request):
+    return render(request,'success.html')

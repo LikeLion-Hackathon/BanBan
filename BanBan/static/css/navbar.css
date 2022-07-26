@@ -97,7 +97,7 @@ input {
   right: -5px;
   width: 340px;
   height: 360px;
-  background-image: url("/assets/images/profile-modal.png");
+  /* background-image: url("/static/assets/images/profile-modal.png"); */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

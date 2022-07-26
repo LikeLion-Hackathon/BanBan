@@ -34,10 +34,12 @@ def new_comment(request, post_id):
 
 
 
-# Create your views here.
+# 공동구매&배달음식 페이지
 def coBuying(request):
     return render(request,'coBuying.html')
 
 def delivery(request):
     return render(request,'delivery.html')
 
+def detailView(request):
+    return render(request,'detailView.html')

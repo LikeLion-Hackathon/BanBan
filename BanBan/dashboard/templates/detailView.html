@@ -1,0 +1,54 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+<link rel="stylesheet" href="{% static '/css/detailView.css' %}" />
+
+<div class="detail">
+  <div class="in-title">
+    <h3 class="title">제목: 같이 공부하실 분?.</h3>
+    <div class="profile">
+      <img
+        src="{% static '/assets/icons/profile.png' %}"
+        width="30px"
+        height="30px"
+      />
+      <p class="name">작성자</p>
+    </div>
+  </div>
+
+  <div class="view-middle">
+    <div class="in_writeDate">2022.07.21 - 작성일자</div>
+    <div class="in_rocation">서울 성북구 삼선동 - 위치</div>
+  </div>
+
+  <div class="view-main">작성자가 작성한 글 내용</div>
+
+  <div class="view-end">
+    <div class="in_writeDate">1/3참여 - 참여인원</div>
+    <div class="in_rocation">2022.07.26 - 모집 마감일</div>
+  </div>
+
+  <h4>댓글</h4>
+  <div class="comment">
+    <img
+      src="{% static '/assets/icons/profile.png' %}"
+      width="20px"
+      height="20px"
+    />
+    <p class="name-comment">닉네임</p>
+  </div>
+  <p class="comments">문의 드립니다.</p>
+  <div class="comment">
+    <img
+      src="{% static '/assets/icons/profile.png' %}"
+      width="20px"
+      height="20px"
+    />
+    <p class="name-comment">닉네임</p>
+  </div>
+  <p class="comments">문의 드립니다.</p>
+
+  <div class="write-comment">
+    <textarea rows="2" cols="50" placeholder="댓글을 남겨보세요."></textarea>
+    <input type="submit" value="등록" />
+  </div>
+</div>
+{% endblock %}

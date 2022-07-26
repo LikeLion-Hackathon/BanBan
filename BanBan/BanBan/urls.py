@@ -14,5 +14,8 @@ urlpatterns = [
 
     path('coBuying/', views.coBuying, name='coBuying'),
     path('delivery/', views.delivery, name='delivery'),
+    path('detailView/', views.detailView, name='detailView'),
     path('signup/', accounts_views.signup, name='signup'),
+    path('success/', accounts_views.success, name='success'),
+    
 ]
