@@ -22,7 +22,7 @@
 }
 .board-container {
   border-radius: 12px;
-  background-color: #e1e1e1;
+  /* background-color: #e1e1e1; */
   padding: 60px 60px 30px 60px;
 }
 /*게시판 내 글 부분*/

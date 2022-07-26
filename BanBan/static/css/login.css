@@ -1,7 +1,6 @@
 img {
-  position: absolute;
-  width: 88px;
-  height: 88px;
+  width: 140px;
+  height: 130px;
 }
 
 div {
@@ -13,7 +12,7 @@ div {
   position: absolute;
   width: 153px;
   height: 22px;
-  left: calc(50% - 153px / 2 - 213.5px);
+  left: calc(50% - 243px / 2 - 213.5px);
   top: calc(50% - 22px / 2 - 329px);
   font-family: "Khula";
   font-style: normal;
@@ -41,7 +40,7 @@ div {
   position: absolute;
   width: 153px;
   height: 24.17px;
-  left: calc(50% - 153px / 2 - 213.5px);
+  left: calc(50% - 223px / 2 - 213.5px);
   top: calc(50% - 23.04px / 2 - 140.92px);
 
   font-family: "Khula";

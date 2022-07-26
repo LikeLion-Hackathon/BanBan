@@ -162,7 +162,7 @@ img {
   left: calc(50% - 273px / 2 - 0.5px);
   top: calc(50% - 71px / 2 + 446.5px);
 
-  background: #b6b6b6;
+  background: #3d2408;
   border-radius: 20px;
   font-family: "Khula";
   font-style: normal;
@@ -188,5 +188,5 @@ img {
   left: 0%;
   top: calc(100% - 100px / 2 + 150.5px);
 
-  background: #d9d9d9;
+  background: #f2eeea;
 }
