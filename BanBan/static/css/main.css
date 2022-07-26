@@ -1,0 +1,65 @@
+/*배너 부분*/
+#banner {
+  height: 300px;
+  position: relative;
+}
+#banner-image {
+  position: absolute;
+  height: 110px;
+  top: 30%;
+}
+/*게시판 부분*/
+.boards {
+  margin-top: 50px;
+}
+.board {
+  margin-bottom: 50px;
+}
+.board-link-title {
+  font-family: Khula;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+.board-container {
+  border-radius: 12px;
+  background-color: #e1e1e1;
+  padding: 60px 60px 30px 60px;
+}
+/*게시판 내 글 부분*/
+.board-component {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.board-info-container {
+  margin: 0px 0px 0px 20px;
+  flex: 7;
+}
+.board-title {
+  font-family: Khula;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.board-participants {
+  font-family: Khula;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.board-date-limit {
+  font-family: Khula;
+  font-size: 20px;
+  font-weight: 300;
+}
+.board-nickname {
+  flex: 3;
+  font-family: Khula;
+  font-size: 20px;
+}
+.board-date {
+  flex: 1;
+  font-family: Khula;
+  font-size: 20px;
+  font-weight: 300;
+}

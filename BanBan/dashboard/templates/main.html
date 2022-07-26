@@ -1,0 +1,69 @@
+{% extends "base.html" %} {% load static %} {% block content %}
+
+<section id="banner">
+  <img
+    src="{% static 'assets/images/banner.png' %}"
+    id="banner-image"
+    alt="배너이미지"
+  />
+</section>
+
+<section class="boards">
+  <article class="board">
+    <div class="board-link-title">
+      <span>공동 구매</span>
+      <img
+        src="{% static 'assets/icons/arrow.png' %}"
+        alt="화살표"
+        style="width: 11px; cursor: pointer"
+        onclick="location.href='coBuying'"
+      />
+    </div>
+    <div class="board-container">
+      <article class="board-component" onclick="">
+        <div>
+          <img
+            src="{% static 'assets/icons/profile.png' %}"
+            alt="프로필"
+            width="40px"
+          />
+        </div>
+        <div class="board-info-container">
+          <p class="board-title">오늘 같이 구매하실 분?</p>
+          <p class="board-participants">
+            1/3<span style="font-weight: 400">명 참여</span>
+          </p>
+          <p class="board-date-limit">
+            2022.07.21 <span style="font-weight: 400">오후</span> 8:30
+          </p>
+        </div>
+        <p class="board-nickname">닉네임</p>
+        <p class="board-date">2022.07.19</p>
+      </article>
+      <hr />
+
+      <article class="board-component">
+        <div>
+          <img
+            src="{% static 'assets/icons/profile.png' %}"
+            alt="프로필"
+            width="40px"
+          />
+        </div>
+        <div class="board-info-container">
+          <p class="board-title">오늘 같이 장보실 분?</p>
+          <p class="board-participants">
+            1/3<span style="font-weight: 400">명 참여</span>
+          </p>
+          <p class="board-date-limit">
+            2022.07.21 <span style="font-weight: 400">오후</span> 8:30
+          </p>
+        </div>
+        <p class="board-nickname">닉네임</p>
+        <p class="board-date">2022.07.19</p>
+      </article>
+      <hr />
+    </div>
+  </article>
+</section>
+{% endblock %}

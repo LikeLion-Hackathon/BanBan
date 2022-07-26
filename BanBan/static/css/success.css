@@ -1,0 +1,41 @@
+/* 로고 */
+img{
+    position: absolute;
+    width:140 ;
+    height:130;
+    left: calc(50% - 250px/2 + 2px);
+    top: calc(50% - 88px/2 - 508px);
+
+    background: #7A7A7A;
+}
+
+/* 회원 정보 입력 타이틀 */
+p{
+    position: absolute;
+    width: 1000px;
+    height: 24.17px;
+    left: calc(50% - 340px);
+    top: calc(50% - 10px); 
+
+    font-family: 'Khula';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 39px;
+
+    color: #5C5C5C;
+}
+
+/* 아래 회색 footer바 */
+.footer{
+    position: absolute;
+    width:100%;
+    height: 183px;
+    /* bottom:0%; */
+    /* left: 0px;
+    top: 1329px; */
+    left: 0%;
+    top: calc(100% - 100px/2 + 150.5px);
+
+    background: #D9D9D9;
+}

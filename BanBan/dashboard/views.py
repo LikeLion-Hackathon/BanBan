@@ -5,7 +5,7 @@ from .models import Post
 def home(request):
     # Posts = Post.objects.all()
     posts = Post.objects.filter().order_by('-date') 
-    return render(request, 'index.html', {'posts':posts})
+    return render(request, 'main.html', {'posts':posts})
 
 def postcreate(request):
     if request.method == 'POST' or request.method == 'FILES':
@@ -31,4 +31,13 @@ def new_comment(request, post_id):
         finished_form.save()
 
     return redirect('detail', post_id)
+
+
+
+# Create your views here.
+def coBuying(request):
+    return render(request,'coBuying.html')
+
+def delivery(request):
+    return render(request,'delivery.html')
 

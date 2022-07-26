@@ -1,0 +1,192 @@
+/* 로고 */
+img {
+  position: absolute;
+  width: 140px;
+  height: 130px;
+  border-radius: 50%;
+  background: #7a7a7a;
+}
+
+/* 회원 정보 입력 타이틀 */
+.id {
+  position: absolute;
+  width: 153px;
+  height: 24.17px;
+  left: calc(50% - 153px / 2 - 213.5px);
+  top: calc(50% - 24.17px / 2 - 327.92px);
+
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #5c5c5c;
+}
+
+.password {
+  position: absolute;
+  width: 153px;
+  height: 24.17px;
+  left: calc(50% - 153px / 2 - 213.5px);
+  top: calc(50% - 23.04px / 2 - 140.92px);
+
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #5c5c5c;
+}
+
+.nickname {
+  position: absolute;
+  width: 153px;
+  height: 22px;
+  left: calc(50% - 153px / 2 - 213.5px);
+  top: calc(50% - 22px / 2 + 33px);
+
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #5c5c5c;
+}
+
+.address {
+  position: absolute;
+  width: 153px;
+  height: 22px;
+  left: calc(50% - 153px / 2 - 213.5px);
+  top: calc(50% - 20.17px / 2 + 220.92px);
+
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #5c5c5c;
+}
+
+/* 회원정보 입력창 */
+#id {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 580px;
+  height: 55px;
+  left: calc(50% - 580px / 2);
+  top: calc(50% - 55px / 2 - 249.5px);
+
+  border: 1px solid rgba(211, 211, 211, 0.2);
+  border-radius: 7px;
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #d0d0d0;
+}
+
+#password {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 580px;
+  height: 55px;
+  left: calc(50% - 580px / 2);
+  top: calc(50% - 55px / 2 - 66.5px);
+
+  border: 1px solid rgba(211, 211, 211, 0.2);
+  border-radius: 7px;
+
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #d0d0d0;
+}
+
+#nickname {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 580px;
+  height: 55px;
+  left: calc(50% - 580px / 2);
+  top: calc(50% - 55px / 2 + 112.5px);
+
+  border: 1px solid rgba(211, 211, 211, 0.2);
+  border-radius: 7px;
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #d0d0d0;
+}
+
+#address {
+  box-sizing: border-box;
+
+  position: absolute;
+  width: 580px;
+  height: 55px;
+  left: calc(50% - 580px / 2);
+  top: calc(50% - 55px / 2 + 295.5px);
+
+  border: 1px solid rgba(211, 211, 211, 0.2);
+  border-radius: 7px;
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 39px;
+
+  color: #d0d0d0;
+}
+
+/* 회원가입하기 버튼 */
+.signup {
+  position: absolute;
+  width: 273px;
+  height: 71px;
+  left: calc(50% - 273px / 2 - 0.5px);
+  top: calc(50% - 71px / 2 + 446.5px);
+
+  background: #b6b6b6;
+  border-radius: 20px;
+  font-family: "Khula";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 39px;
+
+  border: 0;
+  outline: 0;
+  /* identical to box height */
+
+  color: #ffffff;
+}
+
+/* 아래 회색 footer바 */
+.footer {
+  position: absolute;
+  width: 100%;
+  height: 183px;
+  /* bottom:0%; */
+  /* left: 0px;
+    top: 1329px; */
+  left: 0%;
+  top: calc(100% - 100px / 2 + 150.5px);
+
+  background: #d9d9d9;
+}

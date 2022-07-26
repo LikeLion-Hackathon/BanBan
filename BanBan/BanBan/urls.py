@@ -11,4 +11,8 @@ urlpatterns = [
     path('new_comment/<int:post_id>', views.new_comment, name='new_comment'),
     path('login/', accounts_views.login, name='login'),
     path('logout/', accounts_views.logout, name='logout'),
+
+    path('coBuying/', views.coBuying, name='coBuying'),
+    path('delivery/', views.delivery, name='delivery'),
+    path('signup/', accounts_views.signup, name='signup'),
 ]
