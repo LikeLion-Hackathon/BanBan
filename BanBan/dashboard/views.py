@@ -18,16 +18,16 @@ def postcreate(request):
     return render(request, 'post_form.html',{'form':form})
 
 def detail(request, post_id):
-    post_detail = get_object_or_404(post, pk=post_id)
+    post_detail = get_object_or_404(Post, pk=post_id)
     comment_form = CommentForm()
-    return render(request, 'detail.html', {'post_detail':post_detail})
+    return render(request, 'detail.html', {'post_detail':post_detail, 'comment_form':comment_form})
 
 #댓글 저장
 def new_comment(request, post_id):
     filled_form = CommentForm(request.POST)
     if filled_form.is_valid():
-        finished_form = filed_form.save(commit=False)
-        finished_form.post = get_object_or_404(post, pk=post_id)
+        finished_form = filled_form.save(commit=False)
+        finished_form.post = get_object_or_404(Post, pk=post_id)
         finished_form.save()
 
     return redirect('detail', post_id)
