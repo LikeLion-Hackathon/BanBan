@@ -1,6 +1,25 @@
 {% extends "base.html" %} {% load static %} {% block content %}
 <section class="boards" style="margin-top: 80px">
   <article class="board">
+    <div style="text-align: right">
+      <div
+        style="
+          width: 75px;
+          cursor: pointer;
+          display: inline;
+          color: #3d2408;
+          font-weight: 600;
+          margin-right: 60px;
+        "
+        OnClick="location.href=`{% url 'postcreate' %}`"
+      >
+        <span style="padding-right: 5px">글 작성</span
+        ><span
+          style="font-size: 36px; line-height: 20px; vertical-align: middle"
+          >+</span
+        >
+      </div>
+    </div>
     <div class="board-container">
       <article class="board-component" onclick="">
         <div>
