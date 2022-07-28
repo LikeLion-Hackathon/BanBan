@@ -3,6 +3,7 @@ from .forms import PostForm, CommentForm
 from .models import Post 
 
 def home(request):
+    #main.html로 목록을 띄우기 위해 DB에서 객체들을 가져옴, 딕셔너리로 출력(QuerySet)
     # Posts = Post.objects.all()
     posts = Post.objects.filter().order_by('-date') 
     return render(request, 'main.html', {'posts':posts})
@@ -36,7 +37,8 @@ def new_comment(request, post_id):
 
 # 공동구매&배달음식 페이지
 def coBuying(request):
-    return render(request,'coBuying.html')
+    posts = Post.objects.filter().order_by('-date')
+    return render(request,'coBuying.html', {'posts':posts})
 
 def delivery(request):
     return render(request,'delivery.html')
