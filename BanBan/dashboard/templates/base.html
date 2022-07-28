@@ -51,12 +51,30 @@
         </li>
       </nav>
       <section id="login-search-container">
+        {% if user.is_authenticated %}
+        <div id="login" style="display: flex">
+          <div
+            id="logged"
+            style="
+              font-size: 17px;
+              margin-right: 3px;
+              color: #413f42;
+              line-height: 15px;
+            "
+          >
+            {{ user.username }}
+          </div>
+          <div style="font-size: 12px; margin-right: 10px">님</div>
+          <a href="{% url 'logout' %}">로그아웃</a>
+        </div>
+        {% else %}
         <div id="login">
           <a href="#" onclick="goToPage('/signup')" style="margin-right: 10px">
             회원가입
           </a>
           <a href="#" onclick="goToPage('/login')">로그인</a>
         </div>
+        {% endif %}
         <div id="search">
           <input type="text" />
           <img id="search-icon" src="{% static 'assets/icons/search.png' %}" />
@@ -83,8 +101,8 @@
                 />
               </div>
               <div id="profile-modal-name-container">
-                <p style="margin-bottom: 2px">가나다</p>
-                <p id="profile-modal-nickname">닉네임 님</p>
+                <p style="margin-bottom: 2px">{{ user.username }} 님</p>
+                <p id="profile-modal-nickname">가나다</p>
               </div>
             </div>
             <hr class="profile-modal-hr" />
@@ -96,7 +114,10 @@
             </div>
             <hr class="profile-modal-hr" />
             <div id="profile-modal-login">
-              <p class="profile-modal-p" onclick="location.href='#'">
+              <p
+                class="profile-modal-p"
+                onclick="location.href=`{% url 'logout' %}`"
+              >
                 로그아웃
               </p>
             </div>
