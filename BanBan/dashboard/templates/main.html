@@ -7,19 +7,11 @@
   />
 </section>
 
-{% for post in posts %}
-<a href="{% url 'detail' post.id %}"><h3>제목: {{ post.title }}</h3></a>
-<h4>작성날짜: {{ post.date }}</h4>
-본문: {{ post.body }} <br>
-작성자: {{ post.author }}
-<!--pk: {{ post.id }}-->
-{% endfor %}
-
 <section class="boards">
   <article class="board">
     <div class="board-link-title">
       <span>공동 구매</span>
-      <a href="{% url 'postcreate' %}">(새 글 작성)</a>
+
       <img
         src="{% static 'assets/icons/arrow.png' %}"
         alt="화살표"
@@ -28,7 +20,12 @@
       />
     </div>
     <div class="board-container">
-      <article class="board-component" onclick="goToPage('/detailView')">
+      {% for post in posts %} {% if forloop.counter <= 2 %}
+
+      <article
+        class="board-component"
+        onclick="location.href =`{% url 'detail' post.id %}`"
+      >
         <div>
           <img
             src="{% static 'assets/icons/profile.png' %}"
@@ -37,8 +34,7 @@
           />
         </div>
         <div class="board-info-container">
-
-          <p class="board-title">오늘 같이 구매하실 분?</p>
+          <p class="board-title">{{ post.title }}</p>
           <p class="board-participants">
             1/3<span style="font-weight: 400">명 참여</span>
           </p>
@@ -46,10 +42,11 @@
             2022.07.21 <span style="font-weight: 400">오후</span> 8:30
           </p>
         </div>
-        <p class="board-nickname">닉네임</p>
-        <p class="board-date">2022.07.19</p>
+        <p class="board-nickname">{{ post.author }}</p>
+        <p class="board-date">{{ post.date|date:'Y.m.d'}}</p>
       </article>
       <hr />
+      {%endif%} {% endfor %}
 
       <article class="board-component" onclick="goToPage('detailView')">
         <div>
