@@ -8,19 +8,14 @@
 </section>
 
 {% if user.is_authenticated %}
-안녕하세요, {{ user.username }}님
+안녕하세요, {{ user.username }}님<br/>
+<a href="{% url 'logout' %}">로그아웃</a>
 
 {% else %}
-아직 로그인이 되지 않았어요..
+아직 로그인이 되지 않았어요..<br/>
+<a href="{% url 'login' %}">로그인</a>
 {% endif %}
-
-{% for post in posts %}
-<a href="{% url 'detail' post.id %}"><h3>제목: {{ post.title }}</h3></a>
-<h4>작성날짜: {{ post.date }}</h4>
-본문: {{ post.body }} <br>
-작성자: {{ post.author }}
-<!--pk: {{ post.id }}-->
-{% endfor %}
+<br/>
 
 <section class="boards">
   <article class="board">
