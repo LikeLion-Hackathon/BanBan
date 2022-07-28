@@ -52,7 +52,7 @@
       </nav>
       <section id="login-search-container">
         {% if user.is_authenticated %}
-        <div id="login" style="display: flex">
+        <div id="login" style="display: flex; width: 110px">
           <div
             id="logged"
             style="
@@ -64,7 +64,7 @@
           >
             {{ user.username }}
           </div>
-          <div style="font-size: 12px; margin-right: 10px">님</div>
+          <div style="font-size: 12px; margin-right: 8px">님</div>
           <a href="{% url 'logout' %}">로그아웃</a>
         </div>
         {% else %}
