@@ -1,0 +1,11 @@
+* {
+  background-color: lightgray;
+}
+
+body {
+  padding: 30px;
+}
+
+textarea {
+  background-color: whitesmoke;
+}
