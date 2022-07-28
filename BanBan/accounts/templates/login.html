@@ -5,7 +5,7 @@
     <meta charser="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <a href="{% url 'login' %}"><title>로그인</title></a>
+    <title>로그인</title></a>
     <link rel="stylesheet" href="{% static '/css/login.css' %}" />
   </head>
   <body>
@@ -16,11 +16,14 @@
       <img src="{% static '/assets/icons/logo.png' %}" />
     </div>
     <div class="login">
-      <p class="id">아이디</p>
-      <input class="id-box" type="text" placeholder="ID를 입력하세요" />
-      <p class="psw">비밀번호</p>
-      <input class="psw-box" type="text" placeholder="비밀번호를 입력하세요" />
-      <input class="button" type="button" value="로그인하기" />
+      <form action="{% url 'login' %}" method="POST">
+        {% csrf_token %}
+        <p class="id">아이디</p>
+        <input class="id-box" type="text" placeholder="ID를 입력하세요" name="username"/>
+        <p class="psw">비밀번호</p>
+        <input class="psw-box" type="password" placeholder="비밀번호를 입력하세요" name="password"/>
+        <input class="button" type="submit" value="로그인하기" />
+      </form>
     </div>
   </body>
   <footer><div class="footer"></div></footer>

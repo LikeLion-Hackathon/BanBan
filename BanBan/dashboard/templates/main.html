@@ -7,6 +7,13 @@
   />
 </section>
 
+{% if user.is_authenticated %}
+안녕하세요, {{ user.username }}님
+
+{% else %}
+아직 로그인이 되지 않았어요..
+{% endif %}
+
 {% for post in posts %}
 <a href="{% url 'detail' post.id %}"><h3>제목: {{ post.title }}</h3></a>
 <h4>작성날짜: {{ post.date }}</h4>
