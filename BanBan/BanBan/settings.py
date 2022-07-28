@@ -120,6 +120,9 @@ USE_TZ = True
 STATIC_URL = 'static/'
 STATIC_ROOT = 'static/'
 
+LOGIN_REDIRECT_URL = '/' #로그인이 되면 home으로 이동
+LOGOUT_REDIRECT_URL = '/' #로그아웃이 되면 home으로 이동
+
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 

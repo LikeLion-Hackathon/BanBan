@@ -1,9 +1,9 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect 
 from django.contrib import auth 
-from django.contrib.auth.models import User
+#from django.contrib.auth.models import User
 
-def login(request):
+"""def login(request):
     # POST 요청이 들어오면 로그인 처리를 해줌
     if request.method == 'POST':
         userid = request.POST['username']
@@ -24,6 +24,7 @@ def login(request):
 def logout(request):
     auth.logout(request)
     return redirect('home')
+"""
 
 def signup(request):
     return render(request,'signup.html')
