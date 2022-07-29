@@ -1,83 +1,16 @@
 {% load static %}
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>django를 이용한 새 글 작성 페이지</h1>
-<form action="" method="POST">
+  <head>
+    <title>게시글 작성 페이지입니다.</title>
+    <meta charset="UTF-8" />
+    
+    <link rel="stylesheet" href="{% static '/css/write.css' %}" />
+    <form action="" method="POST">
   {% csrf_token %}
   <table>
     {{ form.as_table}}
   </table>
   <input type="submit" value="새 글 작성하기" />
 </form>
-
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>게시글 작성 페이지입니다.</title>
-    <link rel="stylesheet" href="{% static '/css/write.css' %}" />
-  </head>
-  <body>
-    <hr />
-    <hr />
-    <hr />
-    <hr />
-    <div id="board_write">
-      <h4>게시글 작성.</h4>
-      <div id="write_area">
-        <form enctype="multipart/form-data" method="post">
-          <div id="in_title">
-            <textarea
-              name="title"
-              id="utitle"
-              rows="2"
-              cols="50"
-              placeholder="제목"
-              maxlength="100"
-              required
-            ></textarea>
-          </div>
-          <div id="in_writeDate">
-            <p>작성일자</p>
-            <p><input type="date" required /></p>
-          </div>
-          <div id="in_rocation">
-            <textarea
-              name="title"
-              id="utitle"
-              rows="2"
-              cols="50"
-              placeholder="위치"
-              maxlength="100"
-              required
-            ></textarea>
-          </div>
-
-          <div class="wi_line"></div>
-          <div id="in_content">
-            <textarea
-              name="content"
-              id="ucontent"
-              rows="10"
-              cols="50"
-              placeholder="내용"
-              required
-            ></textarea>
-          </div>
-          <input type="file" name="SelectFile" />
-
-          <br /><br />
-          <div id="in_writeDate">
-            <p>모집 마감일자</p>
-            <p><input type="date" required /></p>
-          </div>
-
-          <div class="btn_se">
-            <button type="submit">글 작성</button>
-            <button type="reset">초기화</button>
-            <button type="submit">취소</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </body>
-</html>
